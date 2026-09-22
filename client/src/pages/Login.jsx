@@ -4,8 +4,9 @@ import React from 'react';
 
 function Login() {
   const handleGitHubLogin = () => {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
     // Redirect the whole browser to our backend's GitHub auth route
-    window.location.href = 'http://localhost:5000/api/auth/github';
+    window.location.href = `${apiUrl}/auth/github`;
   };
 
   return (
